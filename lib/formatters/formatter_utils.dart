@@ -24,7 +24,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 import 'package:flutter/foundation.dart';
-import 'package:flutter_multi_formatter/formatters/all_fiat_currencies.dart';
 
 import 'money_input_enums.dart';
 
@@ -696,27 +695,6 @@ bool isUnmaskableSymbol(String? symbol) {
     return false;
   }
   return _isMaskSymbolRegExp.hasMatch(symbol);
-}
-
-/// Checks if currency is fiat
-bool isFiatCurrency(String currencyId) {
-  if (currencyId.length != 3) {
-    return false;
-  }
-  return allFiatCurrencies.contains(
-    currencyId.toUpperCase(),
-  );
-}
-
-/// Basically it doesn't really check if the currencyId is
-/// a crypto currency. It just checks if it's not fiat.
-/// I decided not to collect all possible crypto currecies as
-/// there's an endless amount of them
-bool isCryptoCurrency(String currencyId) {
-  if (currencyId.length < 3 || currencyId.length > 4) {
-    return false;
-  }
-  return !isFiatCurrency(currencyId);
 }
 
 /// [character] a character to check if it's a digit against

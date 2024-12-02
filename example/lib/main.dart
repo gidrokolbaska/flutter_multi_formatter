@@ -1,8 +1,6 @@
-import 'package:example/pages/bitcoin_validator_page.dart';
 import 'package:example/pages/credit_card_format_page.dart';
 import 'package:example/pages/masked_formatter_page.dart';
 import 'package:example/pages/money_format_page.dart';
-import 'package:example/pages/phone_format_page.dart';
 import 'package:example/pages/pos_format_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -110,12 +108,6 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _buildButton(
-                color: Colors.lightGreen,
-                iconData: Icons.phone,
-                label: 'Phone Formatter Demo',
-                pageBuilder: () => PhoneFormatPage(),
-              ),
-              _buildButton(
                 color: Colors.lightBlue,
                 iconData: Icons.credit_card,
                 label: 'Credit Card Formatter Demo',
@@ -132,12 +124,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 iconData: Icons.attach_money,
                 label: 'Money formatter',
                 pageBuilder: () => MoneyFormatPage(),
-              ),
-              _buildButton(
-                color: Colors.green[600]!,
-                iconData: Icons.attach_money,
-                label: 'Bitcoin Validator',
-                pageBuilder: () => BitcoinValidatorPage(),
               ),
               _buildButton(
                 color: Colors.purple,

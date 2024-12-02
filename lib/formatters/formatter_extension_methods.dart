@@ -74,14 +74,6 @@ extension NumericInputFormatting on num {
 }
 
 extension StringInputFormatting on String {
-  bool get isFiatCurrency {
-    return fu.isFiatCurrency(this);
-  }
-
-  bool get isCryptoCurrency {
-    return fu.isCryptoCurrency(this);
-  }
-
   String reverse() {
     return split('').reversed.join();
   }
